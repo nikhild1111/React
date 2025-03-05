@@ -1,0 +1,22 @@
+.product_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: cyan;
+    padding: 25px;
+    border-radius: 10px;
+    gap: 20px;
+    width: 80%;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+.product_item_desc{
+    font-size: 18px;
+    display: block;
+    color: black;
+}
+.but{
+  padding: 10px;
+}
