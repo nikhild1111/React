@@ -8,6 +8,7 @@ const App = () => {
   const [tours,setTours]=useState(Data);
 
 
+  
   //this will give all the tours except the tours which have a id as the given and the we call the setTour so it will be reflect on the app
   function removeTour(id){
     const newTours=tours.filter(tour=>tour.id !== id);
