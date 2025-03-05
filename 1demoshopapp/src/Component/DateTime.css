@@ -1,0 +1,8 @@
+.Date{
+    text-align: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: aqua;
+    gap: 30px;
+}
