@@ -17,14 +17,31 @@ return{
   }
 
 useEffect(() => {
-    console.log("Updated formData:", formData);
+    // console.log("Updated formData:", formData);
   }, [formData]); // Runs whenever formData changes
 
 
-  function submitHandler(e){
+async  function submitHandler(e){
     e.preventDefault();
-    console.log("Submitted Data is :");
-    console.log(formData);
+    try {
+      const response = await fetch("http://localhost:3000/submit", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+      const data = await response.json();
+      // alert(data.message); // Show success message
+      console.log("Server Response:", data);
+  } catch (error) {
+      console.error("Error submitting form:", error);
+  }
+    // console.log(formData);
     }
   return (
     <>

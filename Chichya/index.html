@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Grid</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0582CA;
+            
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* gap: 10px; */
+            width: 50%;
+            /* max-width: 400px; */
+            background-color: #3A6882;
+        }
+
+        .box {
+            height: 16vh;
+            width: 97%;
+            aspect-ratio: 1; /* Makes it a square */
+            /* background-color: steelblue; */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid black;
+            box-shadow: 5px 5px 5px rgb(184, 130, 130);
+        }
+
+        .box1 {
+    position: relative;
+    height: 16vh;
+    width: 97%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px rgb(184, 130, 130);
+    
+}
+
+.cross::before, 
+.cross::after {
+    content: "";
+    position: absolute;
+    width: 107%;
+    height: 4px; /* Thickness of the X */
+    background-color: black;
+}
+
+.cross::before {
+    transform: rotate(45deg);
+}
+
+.cross::after {
+    transform: rotate(-45deg);
+}
+
+.symbol {
+    position: absolute;
+    font-size: 22px;
+    font-weight: bold;
+    color: red; /* Change color if needed */
+}
+
+.top-left { top: 10%; left: 40%; }
+.top-right { top: 40%; right: 10%; }
+.bottom-left { bottom: 40%; left: 10%; }
+.bottom-right { bottom: 10%; right: 40%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box1 cross"> <span class="symbol top-left">O</span>
+            <span class="symbol top-right">O</span>
+            <span class="symbol bottom-left">O</span>
+            <span class="symbol bottom-right">O</span>
+
+        <button class="box"><i style="color: red; width: 30px; height: 70px;" class="fa-solid fa-arrow-down"></i></button>
+        <button class="box"></button>
+        <button class="box"><i style="width: 30px; height: 70px;"  class="fa-solid fa-arrow-right"></i></button>
+        <button class="box"></button>
+        <button class="box"><i style="width: 30px; height: 70px;" class="fa-solid fa-arrow-down"></i></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box1 cross"><span class="symbol top-left">🪟</span>
+            <span class="symbol top-right">🪟</span>
+            <span class="symbol bottom-left">🪟</span> 
+            <span class="symbol bottom-right">🪟</span>
+        </button>
+        <button class="box"><i style="width: 30px; height: 70px;"  class="fa-solid fa-arrow-right"></i></button>
+        <button class="box1 cross"></button>
+        <button class="box"><i style="width:30px; height: 70px;" class="fa-solid fa-arrow-left"></i></button>
+        <button class="box1 cross"> <span class="symbol top-left">X</span> <span class="symbol top-right">X</span> <span class="symbol bottom-left">X</span> <span class="symbol bottom-right">X</span></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"><i style="width: 30px; height: 70px;" class="fa-solid fa-arrow-up"></i></button>
+        <button class="box"></button>
+        <button class="box"><i style="width:30px; height: 70px;" class="fa-solid fa-arrow-left"></i></button>
+        <button class="box"></button>
+        <button class="box"><i style="width: 30px; height: 70px;" class="fa-solid fa-arrow-up"></i></button>
+        <button class="box1 cross">            <span class="symbol top-left">⏻</span>
+            <span class="symbol top-right">⏻</span>
+            <span class="symbol bottom-left">⏻</span>
+            <span class="symbol bottom-right">⏻</span>
+        </button>           
+        <button class="box"></button>
+        <button class="box"></button>
+    </div>
+</body>
+</html>

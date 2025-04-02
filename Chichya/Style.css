@@ -1,0 +1,22 @@
+.container{
+    height: 300px;
+    width: 350px;
+    border: 2px solid black;
+   border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    background-color: #3A6882;
+}
+.box{
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(184, 130, 130);
+    font-size: 36px;
+}
