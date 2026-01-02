@@ -6,6 +6,8 @@ import { comment } from 'postcss';
 
 function App() {
   const [formData, setData] = useState({firstname:"",lastname:"",email:"",country:"",address:"",city:"",state:"",pincode:"",candidates:true,offers:true,comments:true,push:""});
+  
+  // here for ech input filled we get the change handle and data we  put in the input fillde come in the e
   function changeHandler(e){
     const{name,value,checked,type}=e.target;
     setData((prv)=>{

@@ -1,0 +1,25 @@
+import { useEffect, useRef } from "react";
+
+function ExamTimer() {
+  const timeRef = useRef(60);        // remaining time
+  const textRef = useRef(null);      // DOM element
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      timeRef.current -= 1;
+
+      // direct DOM update (no re-render)
+      textRef.current.innerText = `Time Left: ${timeRef.current}s`;
+
+      if (timeRef.current === 0) {
+        clearInterval(id);
+      }
+    }, 1000);
+
+    return () => clearInterval(id);
+  }, []);
+
+  return <h2 ref={textRef}>Time Left: 60s</h2>;
+}
+
+export default ExamTimer;

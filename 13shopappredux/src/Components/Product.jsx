@@ -17,10 +17,10 @@ const Product = ({post}) => {
   }
   return (
     // box shadow for the shadow 
-    <div className='flex flex-col item-center justify-between hover:scale-110 transition duration-300 ease-in gap-3 p-4 mt-10 ml-5 rounded-xl outline'>
-      <div><p className='text-gray-700 font-semibold text-lg truncate w-40 mt-1 mx-auto'>{post.title}</p></div>
+    <div className='flex flex-col item-center justify-between md:hover:scale-110 transition duration-300 ease-in gap-3 p-4 mt-10 ml-5 rounded-xl outline h-[376px]'>
+      <div><p className='text-gray-700 font-bold text-lg truncate w-40 mt-1 mx-auto'>{post.title}</p></div>
       <div>
-        <p className='w-40 text-gray-400 font-normal text-[10px] mx-auto'>{post.description.split(" ").slice(0,10).join(" ")+"..."}</p>
+        <p className='w-40 text-gray-500 font-normal text-[10px] mx-auto'>{post.description.split(" ").slice(0,10).join(" ")+"..."}</p>
       </div>
       <div className='h-[180px]'>
         <img src={post.image} className='h-full w-full'></img>     </div>
@@ -29,7 +29,7 @@ const Product = ({post}) => {
             <p className='text-green-600 font-semibold'>${post.price}</p>
         </div>
         {
-          Cart.some((p)=>p.id==post.id)?(<button className='text-gray-700 border-2 border-gray-700 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in' onClick={removeFromCart}>Remove F Cart</button>):(<button className='text-gray-700 border-2 border-gray-700 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in' onClick={addToCart}>Add to Cart</button>)
+          Cart.some((p)=>p.id==post.id)?(<button className='text-gray-700 border-2 border-gray-700 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in' onClick={removeFromCart}>Remove Item</button>):(<button className='text-gray-700 border-2 border-gray-700 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in' onClick={addToCart}>Add Item</button>)
         }
 
 </div>

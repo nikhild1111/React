@@ -37,12 +37,6 @@ export default function AppContextProvider({ children }) {
     }
 
 
-
-
-
-
-
-
     // inside the value we are sending the all data so every component can access it
     const value = {
         posts,

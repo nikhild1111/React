@@ -16,11 +16,14 @@ reducers:{
     remove:(state,action)=>{
         return state.filter((item)=>item.id!==action.payload);
     },
+    clearCart:(state,action)=>{
+        return [];
+    }
     
 }
 }
 
 );
 
-export const {add,remove,count}=CartSlice.actions;
+export const {add,remove,clearCart}=CartSlice.actions;
 export default CartSlice.reducer;
