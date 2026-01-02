@@ -23,3 +23,18 @@ function ExamTimer() {
 }
 
 export default ExamTimer;
+
+
+// If you say this clearly:
+
+// “For timers like clocks or online exam countdowns, I use useRef to store the interval ID or remaining time because these values don’t affect rendering. This avoids unnecessary re-renders and improves performance.”
+
+// 🔥 This shows:
+
+// You understand React re-rendering
+
+// You know when NOT to use state
+
+// You think about performance
+
+// You know real-world use cases
